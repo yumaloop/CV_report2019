@@ -1,0 +1,106 @@
+\documentclass[11pt,a4j]{jarticle}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{authblk}
+\usepackage[dvipdfmx]{graphicx}
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
+
+% タイトル
+\title{{KCF Trackerによる高速物体追跡}\thanks{慶應義塾大学 理工学研究科 2019春学期 "ComputerVision特論" 最終レポート} \\ }
+% 著者名
+\author{内海 佑麻\thanks{情報工学科4年，Email: uchiumi@ailab.ics.keio.ac.jp} (61602452)}
+% 日付
+\date{2019/07/23}
+
+% 本文
+\begin{document}
+  % タイトル
+  \maketitle
+  % 要約
+  \begin{abstract}
+    モダンな物体追跡手法として，KCF Tracker (Kernelized Correlation Filter Tracker)を紹介し，実装をおこなった．
+    KCF Trackerは，データ行列に巡回性を持たせることにより，DCTによる対角化が可能となり，処理にかかるストレージおよび計算量を大幅に削減することができる．
+    さらに，カーネルトリックにより
+
+  \end{abstract}
+  % 目次
+  \tableofcontents
+  % 本文
+  \section{はじめに}
+    \subsection{Optical flow}
+      異なる時点の2画像間で，各画素値の移動量を表現したベクトルをOptical Flowという．
+      Optical Flowにより特徴点を検出することで，たとえば動画内の特定の物体を追跡することができる．
+      まず，一般論として，勾配法(Gradient-based method)によるOptical Flowの求解手順を定式化する．
+      勾配法では，Taylor展開による近似を用いるため，「連続する2画像での対象物の移動が微小であること」を前提としている．
+
+      \paragraph{勾配法によるOptical Flowの球解}
+      画像$I$における画素$(x,y)$の時刻$t$における画素値を$I(x,y,t)$，時間$\delta t$に対する画素値の移動量を$(\delta x, \delta y)$とおく．
+      移動前後で対象画素の画素値が不変であると仮定すると，
+      \begin{align}
+        I(x,y,t) = I(x + \delta x, y + \delta y, \delta t)
+      \end{align}
+      が成り立つ．さらに，画素値の変化が滑らかであると仮定すると，1次までのTaylor展開により，以下の近似式を得る．
+      \begin{align}
+        I(x,y,t) \approx I(x,y,t) + \frac{\partial I}{\partial x} \delta x + \frac{\partial I}{\partial y} \delta y + \frac{\partial I}{\partial t} \delta t
+      \end{align}
+      両辺を$\delta t$で割って，整理すると，
+      \begin{align}
+        \frac{\partial I}{\partial x} \frac{\delta x}{\delta t} + \frac{\partial I}{\partial y} \frac{\delta y}{\delta t} + \frac{\partial I}{\partial t} = 0
+      \end{align}
+      $\delta t \to 0$とすれば，
+      \begin{align}
+        \frac{\partial I}{\partial x} \frac{\partial x}{\partial t} + \frac{\partial I}{\partial y} \frac{\partial y}{\partial t} + \frac{\partial I}{\partial t} = 0
+      \end{align}
+      ここで，画素$(x,y)$のOptical Flow: $(u,v) = \left(\frac{\partial x}{\partial t}, \frac{\partial y}{\partial t} \right)$に着目する．
+      $I_x = \frac{\partial I}{\partial x}$，$I_y = \frac{\partial I}{\partial y}$，$I_t = \frac{\partial I}{\partial t}$，とおけば，
+      $(u,v)$がみたすべき方程式\footnote{これを，OpticalFlowの拘束式と呼ぶ．}は，次式のようになる．
+      \begin{align}
+        I_x u + I_y v + I_t = 0
+      \end{align}
+      しかし，上式は2つの未知数$u,v$に対して方程式は1つであり，解が定まらない\footnote{これを，Aperture Problem(窓問題)という．}．
+      そのため，上式に加えて，いくつかの仮定(制約条件)を導入してOptical Flow: $(u,v)$を球解する手法が提案されている．
+      古典的で重要な手法として，Lucas–Kanade法やHorn–Schunck法がある．
+      \begin{itemize}
+        \item Lucas–Kanade法 \\
+          「各画素の近傍では，移動方向が相関する」という仮定をおく．
+          画像中の特定の点(領域)に絞って追跡を行うような用途に適しているため，sparse型と呼ばれる．
+        \item Horn–Schunck法 \\
+          「各画素は，変化率が最小となる方向へ移動する」という仮定をおく．
+          画像中の画素全体の動きを解析するような用途に適しているため，dense型と呼ばれる．
+      \end{itemize}
+
+
+  \section{理論}
+    \subsection{Ridge回帰}
+      SVMなどの洗練されたモデルに近い性能をもち，かつ単純な閉形式解\footnote{四則演算と初等関数の合成関数によって表せる解を，閉形式解(closed-form solution)という．}をもつRidge回帰を用いる．
+      訓練データ${({\bf x}_i, y_i)}_{i = 1 \cdots N}$に対するRidge回帰は，以下のように定式化される．
+      \begin{align}
+        \max_{\bf w} \sum_{i} { \left( f({\bf x}_i) - y_i \right) }^{2} + \lambda {\norm{ \bf w }}^{2}, ~~~
+        f({\bf x}_i) = {\bf w}^{\mathrm{T}} {\bf x}_i
+      \end{align}
+      Ridge回帰の閉形式解は，以下のようになる．
+      \begin{align}
+        {\bf w} = { ({X}^{\mathrm{T}} X + \lambda I) }^{-1} {X}^{\mathrm{T}} {\bf y}
+      \end{align}
+      さらに，転置行列$X^{\mathrm{T}}$を，エルミート転置$X^{\mathrm{H}} := {(X^{*})}^{\mathrm{T}}$によって，拡張すると，
+      \begin{align}
+        {\bf w} = { ({X}^{\mathrm{T}} X + \lambda I) }^{-1} {X}^{\mathrm{H}} {\bf y}
+      \end{align}
+      となる．\footnote{$A^{*}$は，行列$A$の複素共役を表す．}
+    \subsection{巡回行列とDFT}
+
+    \subsection{カーネルトリック}
+  \section{実装}
+  \section{考察}
+  \section{結論}
+    \begin{itemize}
+      \item 連続状態空間の制御タスクにおける好奇心駆動の探索戦略: VIMEを提案．
+      \item 状態遷移の前後で，KL情報量が最大化するように報酬関数を設計．
+      \item モデルパラメータ$\theta$の事後分布を推定する際，変分推論(VI)を用いる．
+      \item モデルパラメータ$\theta$は，探索環境のダイナミクスを表現している．
+      \item VIMEは，ヒューリスティックを上回る実験結果を示した．
+    \end{itemize}
+
+  \bibliography{ref} %hoge.bibから拡張子を外した名前
+  \bibliographystyle{junsrt} %参考文献出力スタイル
+\end{document}
