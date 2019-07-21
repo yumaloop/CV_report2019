@@ -166,6 +166,7 @@
       \begin{align}
         C({\bf x}) = F {\rm diag} (\hat{\bf x}) {F}^{H}
       \end{align}
+
     \subsection{巡回行列を使ったRidge回帰}
       $C({\bf x})$をデータ行列として，Ridge回帰を行う，中心化していない共分散行列は，DCT行列$F$を用いて次式のように表せる．
       \begin{align}
@@ -190,7 +191,7 @@
                 &= \frac{{\hat{\bf x}}^{*} \odot \hat{\bf y}}{\hat{{\bf x}}^{*} \odot \hat{\bf x} + \lambda} 
       \end{align}
 
-    \subsection{カーネルトリック}
+    \subsection{Kernel Ridge回帰}
       任意の正定値関数$k({\bf x}_i, {\bf x}_j) = {\phi({\bf x}_i)}^{\mathrm{T}} \phi({\bf x}_j)$に対して，
       \begin{align}
         {\bf w} = \sum_{i=1}^{n} \alpha_i \phi({\bf x}_i)
@@ -223,6 +224,9 @@
       \begin{align}
         {\bf \alpha} = { ( K + \lambda I ) }^{-1} {\bf y}
       \end{align}
+
+    \subsection{巡回行列を使ったKernel Ridge回帰}
+    
 
   \section{実装}
   \section{考察}
