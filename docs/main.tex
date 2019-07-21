@@ -73,23 +73,46 @@
   \section{理論}
     \subsection{Ridge回帰}
       SVMなどの洗練されたモデルに近い性能をもち，かつ単純な閉形式解\footnote{四則演算と初等関数の合成関数によって表せる解を，閉形式解(closed-form solution)という．}をもつRidge回帰を用いる．
-      訓練データ${({\bf x}_i, y_i)}_{i = 1 \cdots N}$に対するRidge回帰は，以下のように定式化される．
+      $n$個の訓練データ${({\bf x}_i, y_i)}_{i = 1 \cdots n}$に対するRidge回帰は，以下のように定式化される．
       \begin{align}
-        \max_{\bf w} \sum_{i} { \left( f({\bf x}_i) - y_i \right) }^{2} + \lambda {\norm{ \bf w }}^{2}, ~~~
+        \min_{\bf w} \sum_{i=1}^{n} { \left( f({\bf x}_i) - y_i \right) }^{2} + \lambda {\norm{ \bf w }}^{2}, ~~~
         f({\bf x}_i) = {\bf w}^{\mathrm{T}} {\bf x}_i
       \end{align}
-      Ridge回帰の閉形式解は，以下のようになる．
+      データ行列
+      \begin{align}
+        X = 
+        \left[
+          \begin{array}{c}
+            x_{1}^{\mathrm{T}} \\
+            x_{2}^{\mathrm{T}} \\
+            x_{3^{\mathrm{T}}} \\
+            \vdots \\
+            x_{N}^{\mathrm{T}} 
+          \end{array}
+        \right]
+        =
+        \left[
+          \begin{array}{ccccc}
+            x_{11} & x_{12} & x_{13} & \cdots & x_{1n} \\
+            x_{21} & x_{22} & x_{23} & \cdots & x_{2n} \\
+            x_{31} & x_{32} & x_{33} & \cdots & x_{3n} \\
+            \vdots&\vdots&\ddots&\ddots&\vdots \\
+            x_{n1} & x_{n2} & x_{n3} & \cdots & x_{nn} 
+          \end{array}
+        \right]
+      \end{align}
+      を用いると，Ridge回帰の閉形式解は，以下のようになる．
       \begin{align}
         {\bf w} = { ({X}^{\mathrm{T}} X + \lambda I) }^{-1} {X}^{\mathrm{T}} {\bf y}
       \end{align}
-      さらに，転置行列$X^{\mathrm{T}}$を，エルミート転置$X^{\mathrm{H}} := {(X^{*})}^{\mathrm{T}}$によって，拡張すると，
+      さらに，転置行列$X^{\mathrm{T}}$を，エルミート転置$X^{\mathrm{H}} := {(X^{*})}^{\mathrm{T}}$によって拡張すると，
       \begin{align}
-        {\bf w} = { ({X}^{\mathrm{T}} X + \lambda I) }^{-1} {X}^{\mathrm{H}} {\bf y}
+        {\bf w} = { ({X}^{\mathrm{H}} X + \lambda I) }^{-1} {X}^{\mathrm{H}} {\bf y}
       \end{align}
       となる．\footnote{$A^{*}$は，行列$A$の複素共役を表す．}
 
     \subsection{巡回行列とDFT}
-
+      注目点の移動パスをベクトル${\bf x} = {(x_1, \cdots x_n)}^{\mathrm{T}} \in \mathbb{R}^{n}$とおく．このとき，cyclic shift operatorとして，$n \times n$行列
       \begin{align}
         P = 
         \left[
@@ -102,11 +125,24 @@
           \end{array}
         \right]
       \end{align}
-      
-      巡回行列を定義する．
-
+      を定義すると，ベクトル${\bf x}$の巡回置換は，
+      \begin{align}
+        \left\{ {P}^{u}{\bf x} | u=0,\cdots n-1 \right\}
+      \end{align}
+      と得られる．すなわち，あるベクトル$\bf x$から，$n$個の仮想サンプルを作成することができる．
+      そこで，ある信号$\bf x$を，$P$を用いて拡張すると，
       \begin{align}
         C({\bf x}) = 
+        \left[
+          \begin{array}{c}
+            {({P}^{0} {\bf x})}^{\mathrm{T}} \\
+            {({P}^{1} {\bf x})}^{\mathrm{T}} \\
+            {({P}^{2} {\bf x})}^{\mathrm{T}} \\
+            \vdots \\
+            {({P}^{n-1} {\bf x})}^{\mathrm{T}} 
+          \end{array}
+        \right]
+        = 
         \left[
           \begin{array}{ccccc}
             x_1 & x_2 & x_3 & \cdots & x_n \\
@@ -117,7 +153,77 @@
           \end{array}
         \right]
       \end{align}
+      を得られる．ここで，$C({\bf x})$は巡回行列(Circulant matrix)だから，これはDFT(Discrete Fourier Transform)によって対角化可能である．
+      すなわち，
+      \begin{align}
+        \forall {\bf x} \in \mathbb{R}^{n}, ~~ F({\bf x}) = \sqrt{n} F{\bf x}
+      \end{align}
+      をみたす，ある定まったDFT行列$F$と，$\bf x$の周波数成分
+      \begin{align}
+        \hat{\bf x} = F({\bf x}) = \sqrt{n} F{\bf x}
+      \end{align}
+      を用いると，$C({\bf x})$は次式のように固有値分解できる．
+      \begin{align}
+        C({\bf x}) = F {\rm diag} (\hat{\bf x}) {F}^{H}
+      \end{align}
+    \subsection{巡回行列を使ったRidge回帰}
+      $C({\bf x})$をデータ行列として，Ridge回帰を行う，中心化していない共分散行列は，DCT行列$F$を用いて次式のように表せる．
+      \begin{align}
+        {C({\bf x})}^{\mathrm{H}}C({\bf x}) = F {\rm diag} (\hat{{\bf x}}^{*}) {F}^{H} F {\rm diag} (\hat{\bf x}) {F}^{H}
+      \end{align}
+      さらに，要素積$\odot$を用いて
+      \begin{align}
+        F^{H}F = {( F^{*} )}^{\mathrm{T}} F &= I \\
+        {\rm diag} (\hat{{\bf x}}^{*})\cdot {\rm diag} (\hat{\bf x}) &= {\rm diag} ( \hat{{\bf x}}^{*} \odot \hat{\bf x} )
+      \end{align}
+      が成り立つから，
+      \begin{align}
+        {C({\bf x})}^{\mathrm{H}}C({\bf x}) = F {\rm diag} ( \hat{{\bf x}}^{*} \odot \hat{\bf x} ) {F}^{H}
+      \end{align}
+      となる．
+      ここで，$\hat{{\bf x}}^{*} \odot \hat{\bf x}$は，信号$\bf x$の自己相関(auto correlation)またはパワースペクトル(power spectrum)と呼ばれる量である．
+      すなわち，$P$によって空間方向にシフトさせた信号どうしの共分散を表している．
+      以上から，データ行列として$C({\bf x})$を用いたRidge回帰の閉形式解は，次のようになる．
+      \begin{align}
+        \hat{\bf w} &= { ({C({\bf x})}^{\mathrm{H}} C({\bf x}) + \lambda I) }^{-1} {C({\bf x})}^{\mathrm{H}} \hat{\bf y} \\
+                &= {\rm diag} \left( \frac{{\hat{\bf x}}^{*}}{\hat{{\bf x}}^{*} \odot \hat{\bf x} + \lambda} \right) \hat{\bf y} \\
+                &= \frac{{\hat{\bf x}}^{*} \odot \hat{\bf y}}{\hat{{\bf x}}^{*} \odot \hat{\bf x} + \lambda} 
+      \end{align}
+
     \subsection{カーネルトリック}
+      任意の正定値関数$k({\bf x}_i, {\bf x}_j) = {\phi({\bf x}_i)}^{\mathrm{T}} \phi({\bf x}_j)$に対して，
+      \begin{align}
+        {\bf w} = \sum_{i=1}^{n} \alpha_i \phi({\bf x}_i)
+      \end{align}
+      とおけば，グラム行列
+      \begin{align}
+        K = 
+        \left[
+          \begin{array}{ccccc}
+            k({\bf x}_1, {\bf x}_1) & k({\bf x}_1, {\bf x}_2) & k({\bf x}_1, {\bf x}_3) & \cdots & k({\bf x}_1, {\bf x}_n) \\
+            k({\bf x}_2, {\bf x}_1) & k({\bf x}_2, {\bf x}_2) & k({\bf x}_2, {\bf x}_3) & \cdots & k({\bf x}_2, {\bf x}_n) \\
+            k({\bf x}_3, {\bf x}_1) & k({\bf x}_3, {\bf x}_2) & k({\bf x}_3, {\bf x}_3) & \cdots & k({\bf x}_3, {\bf x}_n) \\
+            \vdots&\vdots&\ddots&\ddots&\vdots \\
+            k({\bf x}_n, {\bf x}_1) & k({\bf x}_n, {\bf x}_2) & k({\bf x}_n, {\bf x}_3) & \cdots & k({\bf x}_n, {\bf x}_n)
+          \end{array}
+        \right]
+      \end{align}
+      を用いて，Representer定理より，
+      \begin{align}
+        f({\bf x}_i) = {\bf w}^{\mathrm{T}} {\bf x}_i &= \sum_{j=1}^{n} \alpha_j k({\bf x}_i, {\bf x}_j) \\
+        {\norm{ \bf w }}^{2} &= {\bf \alpha}^{\mathrm{T}} K {\bf \alpha}
+      \end{align}
+      が成り立つ．
+      すなわち，$n$個の訓練データ${({\bf x}_i, y_i)}_{i = 1 \cdots n}$に対するKernel Ridge回帰は，以下のように定式化される．
+      \begin{align}
+        \min_{\bf \alpha} \sum_{i=1}^{n} { \left( f({\bf x}_i) - y_i \right) }^{2} + \lambda {\bf \alpha}^{\mathrm{T}} K {\bf \alpha}, ~~~
+        f({\bf x}_i) =  \sum_{j=1}^{n} \alpha_j k({\bf x}_i, {\bf x}_j)
+      \end{align}
+      Kernel Ridge回帰の閉形式解は，以下のようになる．
+      \begin{align}
+        {\bf \alpha} = { ( K + \lambda I ) }^{-1} {\bf y}
+      \end{align}
+
   \section{実装}
   \section{考察}
   \section{結論}
