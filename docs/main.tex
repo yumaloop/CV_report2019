@@ -188,7 +188,11 @@
       \begin{align}
         \hat{\bf w} &= { ({C({\bf x})}^{\mathrm{H}} C({\bf x}) + \lambda I) }^{-1} {C({\bf x})}^{\mathrm{H}} \hat{\bf y} \\
                 &= {\rm diag} \left( \frac{{\hat{\bf x}}^{*}}{\hat{{\bf x}}^{*} \odot \hat{\bf x} + \lambda} \right) \hat{\bf y} \\
-                &= \frac{{\hat{\bf x}}^{*} \odot \hat{\bf y}}{\hat{{\bf x}}^{*} \odot \hat{\bf x} + \lambda} 
+                &= \frac{{\hat{\bf x}}^{*} \odot \hat{\bf y}}{\hat{{\bf x}}^{*} \odot \hat{\bf x} + \lambda} \\
+      \end{align}
+      よって，逆DFT${F}^{-1}$を用いて，$w$が求められる．
+      \begin{align}
+        {\bf w} = {F}^{-1}( \hat{\bf w} )
       \end{align}
 
     \subsection{Kernel Ridge回帰}
@@ -264,13 +268,16 @@
         \hat{\bf \alpha} &= { ( C( {\bf {k}^{xx}} ) + \lambda I ) }^{-1} {\bf y} \\
                 &= \frac{\hat{\bf y}}{ {\bf {\hat{k}}^{xx} } + \lambda }
       \end{align}
-
-      RBF
+      よって，逆DFT${F}^{-1}$を用いて，$w$が求められる．
       \begin{align}
-        {\bf {k}^{xx'}} = \exp \left( - \frac{1}{\sigma^2} \left( \norm{\bf x}^{2} + \norm{\bf x'}^{2} - 2 \mathcal{F}^{-1} ( \hat{{\bf x}}^{*} \odot \hat{\bf x'} ) \right) \right)
+        {\bf \alpha} = {F}^{-1}( \hat{\bf \alpha} )
       \end{align}
-
+      
   \section{実装}
+    RBF kernelを用いる．
+    \begin{align}
+      {\bf {k}^{xx'}} = \exp \left\{ - \frac{1}{\sigma^2} \left( \norm{\bf x}^{2} + \norm{\bf x'}^{2} - 2 {F}^{-1} ( \hat{{\bf x}}^{*} \odot \hat{\bf x}' ) \right) \right\}
+    \end{align}
   \section{考察}
   \section{結論}
     \begin{itemize}
