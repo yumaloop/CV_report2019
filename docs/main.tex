@@ -127,7 +127,7 @@
       \end{align}
       を定義すると，ベクトル${\bf x}$の巡回置換は，
       \begin{align}
-        \left\{ {P}^{u}{\bf x} | u=0,\cdots n-1 \right\}
+        \left\{ {P}^{u}{\bf x} ~|~ u=0,\cdots n-1 \right\}
       \end{align}
       と得られる．すなわち，あるベクトル$\bf x$から，$n$個の仮想サンプルを作成することができる．
       そこで，ある信号$\bf x$を，$P$を用いて拡張すると，
@@ -156,7 +156,7 @@
       を得られる．ここで，$C({\bf x})$は巡回行列(Circulant matrix)だから，これはDFT(Discrete Fourier Transform)によって対角化可能である．
       すなわち，
       \begin{align}
-        \forall {\bf x} \in \mathbb{R}^{n}, ~~ F({\bf x}) = \sqrt{n} F{\bf x}
+        \forall {\bf z} \in \mathbb{R}^{n}, ~~ F({\bf z}) = \sqrt{n} F{\bf z}
       \end{align}
       をみたす，ある定まったDFT行列$F$と，$\bf x$の周波数成分
       \begin{align}
@@ -226,17 +226,52 @@
       \end{align}
 
     \subsection{巡回行列を使ったKernel Ridge回帰}
-    
+      Ridge回帰と同様に，ベクトル${\bf x}$とその巡回シフトに対するカーネルは，$P$と$k(\cdot,\cdot)$を用いて
+      \begin{align}
+        \left\{ k({\bf x}, {P}^{u}{\bf x}) ~|~ u=0,\cdots n-1 \right\} 
+      \end{align}
+      となる．よって，ベクトル${\bf {k}^{xx}}$を，
+      \begin{align}
+        {\bf k^{xx}_{i}} = k({\bf x}, {P}^{i-1}{\bf x}) ~~~ (i=1,\cdots n)
+      \end{align}
+      と定義し，これを用いた巡回行列
+      \begin{align}
+        C({\bf k^{xx}}) = 
+        \left[
+          \begin{array}{c}
+            {({P}^{0} {\bf k^{xx}})}^{\mathrm{T}} \\
+            {({P}^{1} {\bf k^{xx}})}^{\mathrm{T}} \\
+            \vdots \\
+            {({P}^{n-1} {\bf k^{xx}})}^{\mathrm{T}} 
+          \end{array}
+        \right]
+        = 
+        \left[
+          \begin{array}{cccc}
+            k({\bf x}, P^{0}{\bf x}) & k({\bf x}, P^{1}{\bf x}) & \cdots & k({\bf x}, P^{n-1}{\bf x}) \\
+            k({\bf x}, P^{n-1}{\bf x}) & k({\bf x}, P^{0}{\bf x}) & \cdots & k({\bf x}, P^{n-2}{\bf x}) \\
+            \vdots&\vdots&\ddots&\vdots \\
+            k({\bf x}, P^{1}{\bf x}) & k({\bf x}, P^{2}{\bf x}) &  \cdots & k({\bf x}, P^{0}{\bf x}) 
+          \end{array}
+        \right]
+      \end{align}
+      を得られる．さらに，中心化していない共分散行列は，DCT行列$F$を用いて次式のように表せる．
+      \begin{align}
+        {C( {\bf {k}^{xx}} ) }^{\mathrm{H}} C( {\bf {k}^{xx}} ) = F {\rm diag} \left( {\bf {\hat{k^*}}^{xx}} \odot {\bf {\hat{k}}^{xx} } \right) {F}^{\mathrm{H}} 
+      \end{align}
+      以上から，データ行列として$C({\bf {k}^{xx}})$を用いたKernel Ridge回帰の閉形式解は，次のようになる．
+      \begin{align}
+        \hat{\bf \alpha} &= { ( C( {\bf {k}^{xx}} ) + \lambda I ) }^{-1} {\bf y} \\
+                &= \frac{\hat{\bf y}}{ {\bf {\hat{k}}^{xx} } + \lambda }
+      \end{align}
 
   \section{実装}
   \section{考察}
   \section{結論}
     \begin{itemize}
-      \item 連続状態空間の制御タスクにおける好奇心駆動の探索戦略: VIMEを提案．
-      \item 状態遷移の前後で，KL情報量が最大化するように報酬関数を設計．
-      \item モデルパラメータ$\theta$の事後分布を推定する際，変分推論(VI)を用いる．
-      \item モデルパラメータ$\theta$は，探索環境のダイナミクスを表現している．
-      \item VIMEは，ヒューリスティックを上回る実験結果を示した．
+      \item foo
+      \item bar
+      \item buz
     \end{itemize}
 
   \bibliography{ref} %hoge.bibから拡張子を外した名前
