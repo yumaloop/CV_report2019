@@ -265,6 +265,11 @@
                 &= \frac{\hat{\bf y}}{ {\bf {\hat{k}}^{xx} } + \lambda }
       \end{align}
 
+      RBF
+      \begin{align}
+        {\bf {k}^{xx'}} = \exp \left( - \frac{1}{\sigma^2} \left( \norm{\bf x}^{2} + \norm{\bf x'}^{2} - 2 \mathcal{F}^{-1} ( \hat{{\bf x}}^{*} \odot \hat{\bf x'} ) \right) \right)
+      \end{align}
+
   \section{実装}
   \section{考察}
   \section{結論}
