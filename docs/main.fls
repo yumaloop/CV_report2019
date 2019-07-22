@@ -20,10 +20,16 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/preprint/authblk.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/preprint/authblk.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
@@ -35,5 +41,3 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
 INPUT /Users/uchiumi/workspace/CV_report2019/docs/main.aux
 INPUT /Users/uchiumi/workspace/CV_report2019/docs/main.aux
 OUTPUT /Users/uchiumi/workspace/CV_report2019/docs/main.aux
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
