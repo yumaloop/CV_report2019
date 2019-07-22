@@ -20,6 +20,8 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/preprint/authblk.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/preprint/authblk.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
