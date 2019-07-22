@@ -304,6 +304,7 @@
 
     \paragraph{実行環境}
     以下の環境でプログラムを実装した．主要なスクリプトの記述にはPythonを採用した．
+    使用したコードは，https://github.com/yumaloop/CV\_report2019で公開した．
 
     \begin{itemize}
       \item OS: macOS Mojave 10.14.4
@@ -315,7 +316,6 @@
     なお，今回は，KCF Trackerアルゴリズムのみを実装したため，動画の入出力やユーザインターフェースは，OpenCVの定義済み関数を利用した．
     具体的に，KCF Trackerのオブジェクトをインポートできる$\rm OpenCVのcv2.TrackerKCF\_create()$を使って，Object Trackingを行うコードは次のようになる．
     このうち，コード中のオブジェクト$\rm tracker$と関連する処理を実装した．
-    \\*
     
     \begin{lstlisting}[basicstyle=\ttfamily\footnotesize, frame=single]
       import sys
