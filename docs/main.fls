@@ -35,3 +35,5 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
 INPUT /Users/uchiumi/workspace/CV_report2019/docs/main.aux
 INPUT /Users/uchiumi/workspace/CV_report2019/docs/main.aux
 OUTPUT /Users/uchiumi/workspace/CV_report2019/docs/main.aux
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm

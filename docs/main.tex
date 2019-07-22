@@ -18,7 +18,7 @@
   \maketitle
   % 要約
   \begin{abstract}
-    モダンな物体追跡手法として，KCF Tracker (Kernelized Correlation Filter Tracker)を紹介し，実装をおこなった．
+    モダンな物体追跡手法として，KCF Tracker (Kernelized Correlation Filter Tracker)を紹介し，実装をおこなった．\cite{DBLP:journals/corr/HenriquesCMB14}
     KCF Trackerは，データ行列に巡回性を持たせることにより，DCTによる対角化が可能となり，処理にかかるストレージおよび計算量を大幅に削減することができる．
     さらに，カーネルトリックにより
 
@@ -27,39 +27,51 @@
   \tableofcontents
   % 本文
   \section{はじめに}
+
     \subsection{Optical flow}
       異なる時点の2画像間で，各画素値の移動量を表現したベクトルをOptical Flowという．
       Optical Flowにより特徴点を検出することで，たとえば動画内の特定の物体を追跡することができる．
       まず，一般論として，勾配法(Gradient-based method)によるOptical Flowの求解手順を定式化する．
       勾配法では，Taylor展開による近似を用いるため，「連続する2画像での対象物の移動が微小であること」を前提としている．
 
-      \paragraph{勾配法によるOptical Flowの球解}
-      画像$I$における画素$(x,y)$の時刻$t$における画素値を$I(x,y,t)$，時間$\delta t$に対する画素値の移動量を$(\delta x, \delta y)$とおく．
+      \paragraph{勾配法によるOptical Flowの求解}
+      画像$I$における画素$(x,y)$の時刻$t$における画素値を$I(x,y,t)$，時間$\Delta t$に対する画素値の移動量を$(\Delta x, \Delta y)$とおく．
       移動前後で対象画素の画素値が不変であると仮定すると，
+
       \begin{align}
-        I(x,y,t) = I(x + \delta x, y + \delta y, \delta t)
+        I(x, ~ y, ~ t) = I(x + \Delta x, ~ y + \Delta y, ~ \Delta t)
       \end{align}
+
       が成り立つ．さらに，画素値の変化が滑らかであると仮定すると，1次までのTaylor展開により，以下の近似式を得る．
+
       \begin{align}
-        I(x,y,t) \approx I(x,y,t) + \frac{\partial I}{\partial x} \delta x + \frac{\partial I}{\partial y} \delta y + \frac{\partial I}{\partial t} \delta t
+        I(x,y,t) \approx I(x,y,t) + \frac{\partial I}{\partial x} \Delta x + \frac{\partial I}{\partial y} \Delta y + \frac{\partial I}{\partial t} \Delta t
       \end{align}
-      両辺を$\delta t$で割って，整理すると，
+
+      両辺を$\Delta t$で割って，整理すると，
+
       \begin{align}
-        \frac{\partial I}{\partial x} \frac{\delta x}{\delta t} + \frac{\partial I}{\partial y} \frac{\delta y}{\delta t} + \frac{\partial I}{\partial t} = 0
+        \frac{\partial I}{\partial x} \frac{\Delta x}{\Delta t} + \frac{\partial I}{\partial y} \frac{\Delta y}{\Delta t} + \frac{\partial I}{\partial t} = 0
       \end{align}
-      $\delta t \to 0$とすれば，
+
+      $\Delta t \to 0$とすれば，
+
       \begin{align}
         \frac{\partial I}{\partial x} \frac{\partial x}{\partial t} + \frac{\partial I}{\partial y} \frac{\partial y}{\partial t} + \frac{\partial I}{\partial t} = 0
       \end{align}
+
       ここで，画素$(x,y)$のOptical Flow: $(u,v) = \left(\frac{\partial x}{\partial t}, \frac{\partial y}{\partial t} \right)$に着目する．
       $I_x = \frac{\partial I}{\partial x}$，$I_y = \frac{\partial I}{\partial y}$，$I_t = \frac{\partial I}{\partial t}$，とおけば，
       $(u,v)$がみたすべき方程式\footnote{これを，OpticalFlowの拘束式と呼ぶ．}は，次式のようになる．
+
       \begin{align}
         I_x u + I_y v + I_t = 0
       \end{align}
-      しかし，上式は2つの未知数$u,v$に対して方程式は1つであり，解が定まらない\footnote{これを，Aperture Problem(窓問題)という．}．
+
+      しかし，上式は2つの未知数$u,v$に対して方程式は1つであり，解が定まらない\footnote{これを，Aperture Problem(窓問題)という．}．\cite{Szeliski:2010:CVA:1941882}
       そのため，上式に加えて，いくつかの仮定(制約条件)を導入してOptical Flow: $(u,v)$を球解する手法が提案されている．
-      古典的で重要な手法として，Lucas–Kanade法やHorn–Schunck法がある．
+      古典的で重要な手法として，Lucas–Kanade法やHorn–Schunck法がある．\cite{Horn:1980:DOF:888857}\cite{Lucas:1981:IIR:1623264.1623280}\cite{Harris88acombined}\cite{Tomasi91detectionand}
+
       \begin{itemize}
         \item Lucas–Kanade法 \\
           「各画素の近傍では，移動方向が相関する」という仮定をおく．
@@ -68,6 +80,10 @@
           「各画素は，変化率が最小となる方向へ移動する」という仮定をおく．
           画像中の画素全体の動きを解析するような用途に適しているため，dense型と呼ばれる．
       \end{itemize}
+
+    \subsection{Kernelized Correlation Filters}
+      Kernelized Correlation Filters\cite{6870486}を実装する．
+
 
 
   \section{理論}

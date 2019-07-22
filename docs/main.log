@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.26)  21 JUL 2019 17:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.26)  23 JUL 2019 00:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -452,7 +452,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.21 ...Correlation Filter Tracker)を紹介し，
-                                                  実装をおこなった．
+                                                  実装をおこなった�...
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -465,7 +465,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.21 ...relation Filter Tracker)を紹介し，実
-                                                  装をおこなった．
+                                                  装をおこなった．\c...
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -478,7 +478,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.21 ...ation Filter Tracker)を紹介し，実装
-                                                  をおこなった．
+                                                  をおこなった．\cite...
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -491,7 +491,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.21 ...on Filter Tracker)を紹介し，実装を
-                                                  おこなった．
+                                                  おこなった．\cite{DB...
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -504,7 +504,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.21 ...Filter Tracker)を紹介し，実装をお
-                                                  こなった．
+                                                  こなった．\cite{DBLP:...
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -517,7 +517,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.21 ...ter Tracker)を紹介し，実装をおこ
-                                                  なった．
+                                                  なった．\cite{DBLP:jou...
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -530,7 +530,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.21 ... Tracker)を紹介し，実装をおこな
-                                                  った．
+                                                  った．\cite{DBLP:journa...
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -543,7 +543,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.21 ...acker)を紹介し，実装をおこなっ
-                                                  た．
+                                                  た．\cite{DBLP:journals/...
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -556,7 +556,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.21 ...er)を紹介し，実装をおこなった
-                                                  ．
+                                                  ．\cite{DBLP:journals/cor...
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
@@ -569,10 +569,26 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.21 ...を紹介し，実装をおこなった．
-                                                  
+                                                  \cite{DBLP:journals/corr/H...
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
+Missing character: There is no [ in font nullfont!
+/Users/uchiumi/workspace/CV_report2019/docs/main.tex:21: Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.21 ...��\cite{DBLP:journals/corr/HenriquesCMB14}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `DBLP:journals/corr/HenriquesCMB14' on page  undefined on input line 21.
+
+Missing character: There is no ] in font nullfont!
 Missing character: There is no K in font nullfont!
 Missing character: There is no C in font nullfont!
 Missing character: There is no F in font nullfont!
@@ -1454,27 +1470,14 @@ Type  H <return>  for immediate help.
                                                   
 l.22 ...大幅に削減することができる．
                                                   
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character さ (U+3055)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23     さ
-            らに，カーネルトリックにより
 (That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
- 1201 strings out of 492649
- 14741 string characters out of 6129622
+ 1203 strings out of 492649
+ 14760 string characters out of 6129622
  78679 words of memory out of 5000000
- 5130 multiletter control sequences out of 15000+600000
- 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 5131 multiletter control sequences out of 15000+600000
+ 3948 words of font info for 15 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,1n,25p,283b,80s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,2n,27p,283b,127s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23:  ==> Fatal error occurred, no output PDF file produced!
+/Users/uchiumi/workspace/CV_report2019/docs/main.tex:22:  ==> Fatal error occurred, no output PDF file produced!
