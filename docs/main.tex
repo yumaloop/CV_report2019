@@ -80,12 +80,11 @@
         \item Horn–Schunck法 \\
           「各画素は，変化率が最小となる方向へ移動する」という仮定をおく．
           画像中の画素全体の動きを解析するような用途に適しているため，dense型と呼ばれる．
-      \end{itemize}
-
-    \subsection{Kernelized Correlation Filters}
-      Kernelized Correlation Filters\cite{DBLP:journals/corr/HenriquesCMB14}を実装する．
+      \end{itemize}      
 
   \section{理論}
+    Kernelized Correlation Filters\cite{DBLP:journals/corr/HenriquesCMB14}について解説する．
+
     \subsection{Ridge回帰}
       SVMなどの洗練されたモデルに近い性能をもち，かつ単純な閉形式解\footnote{四則演算と初等関数の合成関数によって表せる解を，閉形式解(closed-form solution)という．}をもつRidge回帰を用いる．
       $n$個の訓練データ${({\bf x}_i, y_i)}_{i = 1 \cdots n}$に対するRidge回帰は，以下のように定式化される．
