@@ -1,11 +1,12 @@
 # CV_report2019
 
+慶應義塾大学 理工学研究科 「Computer Vision特論 (2019春)」の期末レポート．
 
 https://ehsangazar.com/object-tracking-with-opencv-fd18ccdd7369
 
 
 ### Description
-慶應義塾大学 理工学研究科 「Computer Vision特論 (2019春)」の期末レポートです．
+レポートは`docs/main.pdf`に，実装に使ったコードは`code`にある．
 
 ### Usage
 
