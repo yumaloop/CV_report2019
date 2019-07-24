@@ -1,6 +1,7 @@
 import cv2
 
-input_file="./chaplin_kcf.m4v"
+input_file  = "./car2_kcf_opencv/car2_kcf_opencv.m4v"
+output_file_prefix = "./car2_kcf_opencv/car2_kcf_opencv"
 cap = cv2.VideoCapture(input_file)
 
 def getFrame(cap, sec, count):
@@ -10,9 +11,9 @@ def getFrame(cap, sec, count):
 
     if ret:
         # Display frame number on frame
-        cv2.putText(frame, "Frame No. "+str(int(count)), (100, 80), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255,0,0), 2)
+        cv2.putText(frame, "Frame No. "+str(int(count)), (100, 80), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0,0,255), 2)
         # Save frame as JPG file
-        cv2.imwrite("./chaplin_kcf/chaplin_kcf"+str(count)+".jpg", frame)     # save frame as JPG file
+        cv2.imwrite(output_file_prefix+str(count)+".jpg", frame)     # save frame as JPG file
 
     return ret
 

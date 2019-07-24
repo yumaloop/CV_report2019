@@ -5,50 +5,10 @@ from time import time
 
 import kcftracker
 
-selectingObject = False
-initTracking = False
-onTracking = False
-ix, iy, cx, cy = -1, -1, -1, -1
-w, h = 0, 0
-
-inteval = 1
-duration = 0.01
-
-
-# mouse callback function
-def draw_boundingbox(event, x, y, flags, param):
-    global selectingObject, initTracking, onTracking, ix, iy, cx,cy, w, h
-    
-    if event == cv2.EVENT_LBUTTONDOWN:
-        selectingObject = True
-        onTracking = False
-        ix, iy = x, y
-        cx, cy = x, y
-    
-    elif event == cv2.EVENT_MOUSEMOVE:
-        cx, cy = x, y
-    
-    elif event == cv2.EVENT_LBUTTONUP:
-        selectingObject = False
-        if(abs(x-ix)>10 and abs(y-iy)>10):
-            w, h = abs(x - ix), abs(y - iy)
-            ix, iy = min(x, ix), min(y, iy)
-            initTracking = True
-        else:
-            onTracking = False
-    
-    elif event == cv2.EVENT_RBUTTONDOWN:
-        onTracking = False
-        if(w>0):
-            ix, iy = x-w/2, y-h/2
-            initTracking = True
-
-
-
 if __name__ == '__main__':
     # set I/O files
     input_file  = "./input/chaplin.mp4"
-    output_file = "./output/chaplin_kcf.m4v"
+    output_file = "./output/chaplin_kcf_impl/chaplin_kcf_impl.m4v"
 
     # cap: captured images from the video
     cap = cv2.VideoCapture(input_file)
