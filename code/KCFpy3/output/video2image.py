@@ -1,7 +1,7 @@
 import cv2
 
-input_file  = "./bus1_kcf_impl/bus1_kcf_impl.m4v"
-output_file_prefix = "./bus1_kcf_impl/bus1_kcf_impl"
+input_file  = "./car1_kcf_impl/car1_kcf_impl.m4v"
+output_file_prefix = "./car1_kcf_impl/car1_kcf_impl"
 cap = cv2.VideoCapture(input_file)
 
 def getFrame(cap, sec, count):
