@@ -5,6 +5,9 @@ import fhog
 
 # ffttools
 def fftd(img, backwards=False):	
+    '''
+    fast fourier transform (descrite)
+    '''
 	# shape of img can be (m,n), (m,n,1) or (m,n,2)	
 	# in my test, fft provided by numpy and scipy are slower than cv2.dft
 	return cv2.dft(np.float32(img), flags = ((cv2.DFT_INVERSE | cv2.DFT_SCALE) if backwards else cv2.DFT_COMPLEX_OUTPUT))   # 'flags =' is necessary!
@@ -88,6 +91,50 @@ def subwindow(img, window, borderType=cv2.BORDER_CONSTANT):
 
 # KCF tracker
 class KCFTracker:
+    '''
+    KCF Tracker
+
+    Args:
+    =====
+    lamdar: float
+        lambda
+    padding; float
+        padding
+    outpout_sigma_factor: float
+        sigma
+    interp_factor
+    sigma: float
+        sigma
+    cell_size: int
+        the size of 
+    _hogfeatures: bool
+        flags for
+    _template_size: int
+        the size of 
+    scale_step: int
+        hoge
+    scale_weight: float
+        hoge
+    template_size: int
+        asdf
+    _tmple_sz: list [?, ?]
+        the size of 
+    _roi: list [?, ?, ?, ?]
+        asdf
+    size_patch: list [?, ?, ?]
+        asdf
+    _scale: float
+        asdf
+    _alphaf: numpy.ndarray
+        asdf
+    _prob: numpy.ndarray
+        asdf
+    _tmpl: numpy.ndarray
+        asdf
+    hann: numpy.ndarray
+        asdf
+    '''
+
 	def __init__(self, hog=False, fixed_window=True, multiscale=False):
 		self.lambdar = 0.0001   # regularization
 		self.padding = 2.5   # extra area surrounding the target

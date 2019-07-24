@@ -68,21 +68,21 @@ if __name__ == '__main__':
 			break
 
 		if(selectingObject):
-			cv2.rectangle(frame,(ix,iy), (cx,cy), (0,255,255), 1)
+			cv2.rectangle(frame,(ix,iy), (cx,cy), (255, 0, 0), 1)
 		elif(initTracking):
-			cv2.rectangle(frame,(ix,iy), (ix+w,iy+h), (0,255,255), 2)
+			cv2.rectangle(frame,(ix,iy), (ix+w,iy+h), (255, 0, 0), 2)
 
-			tracker.init([ix,iy,w,h], frame)
+			tracker.init([ix,iy,w,h], frame) # <------------ initilize trakcer
 
 			initTracking = False
 			onTracking = True
 		elif(onTracking):
 			t0 = time()
-			boundingbox = tracker.update(frame)
+			boundingbox = tracker.update(frame) # <---------- update tracker by frame
 			t1 = time()
 
 			boundingbox = map(int, boundingbox)
-			cv2.rectangle(frame,(boundingbox[0],boundingbox[1]), (boundingbox[0]+boundingbox[2],boundingbox[1]+boundingbox[3]), (0,255,255), 1)
+			cv2.rectangle(frame,(boundingbox[0],boundingbox[1]), (boundingbox[0]+boundingbox[2],boundingbox[1]+boundingbox[3]), (255, 0, 0), 2, 1)
 			
 			duration = 0.8*duration + 0.2*(t1-t0)
 			#duration = t1-t0
