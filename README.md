@@ -17,6 +17,7 @@ KCF TrackerをPythonで実装した．
 - Language
     - Python 3.7.4
         - Numpy 1.16.1
+        - Pillow 5.4.1
         - Opencv-python 4.1.0
 
 ### Usage
