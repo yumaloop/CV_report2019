@@ -1,142 +1,185 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.26)  25 JUL 2019 00:05
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2019.2.26)  25 JUL 2019 00:06
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/uchiumi/workspace/CV_report2019/docs/main.tex
-(/Users/uchiumi/workspace/CV_report2019/docs/main.tex
-LaTeX2e <2018-04-01> patch level 2
+**main.tex
+(./main.tex
+pLaTeX2e <2018-04-01>+1 (based on LaTeX2e <2018-04-01> patch level 2)
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/platex/base/jarticle.cls
-
-/usr/local/texlive/2018/texmf-dist/tex/platex/base/jarticle.cls:16: LaTeX Error: This file needs format `pLaTeX2e'
-               but this is `LaTeX2e'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.16 \NeedsTeXFormat{pLaTeX2e}
-                              
-The current input file will not be processed further,
-because it was written for some other flavor of TeX.
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Document Class: jarticle 2018/02/04 v1.7h Standard pLaTeX class
+\c@@paper=\count83
+(/usr/local/texlive/2018/texmf-dist/tex/platex/base/jsize11.clo
+File: jsize11.clo 2018/02/04 v1.7h Standard pLaTeX file (size option)
+)
+\c@part=\count84
+\c@section=\count85
+\c@subsection=\count86
+\c@subsubsection=\count87
+\c@paragraph=\count88
+\c@subparagraph=\count89
+\c@figure=\count90
+\c@table=\count91
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 614.
+\toclineskip=\dimen118
+\@lnumwidth=\dimen119
+\bibindent=\dimen120
+\heisei=\count92
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks14
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
+\@emptytoks=\toks15
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
-\@mathmargin=\skip41
+\@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
- (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks15
-\ex@=\dimen102
-)) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
+\@emptytoks=\toks16
+\ex@=\dimen121
+))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen103
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
+\pmbraise@=\dimen122
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count80
+\inf@bad=\count93
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count81
-\leftroot@=\count82
+\uproot@=\count94
+\leftroot@=\count95
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count83
-\DOTSCASE@=\count84
+\classnum@=\count96
+\DOTSCASE@=\count97
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box26
-\strutbox@=\box27
-\big@size=\dimen104
+\Mathstrutbox@=\box42
+\strutbox@=\box43
+\big@size=\dimen123
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count85
-\c@MaxMatrixCols=\count86
+\macc@depth=\count98
+\c@MaxMatrixCols=\count99
 \dotsspace@=\muskip10
-\c@parentequation=\count87
-\dspbrk@lvl=\count88
-\tag@help=\toks16
-\row@=\count89
-\column@=\count90
-\maxfields@=\count91
-\andhelp@=\toks17
-\eqnshift@=\dimen105
-\alignsep@=\dimen106
-\tagshift@=\dimen107
-\tagwidth@=\dimen108
-\totwidth@=\dimen109
-\lineht@=\dimen110
-\@envbody=\toks18
-\multlinegap=\skip42
-\multlinetaggap=\skip43
-\mathdisplay@stack=\toks19
+\c@parentequation=\count100
+\dspbrk@lvl=\count101
+\tag@help=\toks17
+\row@=\count102
+\column@=\count103
+\maxfields@=\count104
+\andhelp@=\toks18
+\eqnshift@=\dimen124
+\alignsep@=\dimen125
+\tagshift@=\dimen126
+\tagwidth@=\dimen127
+\totwidth@=\dimen128
+\lineht@=\dimen129
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/preprint/authblk.sty
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/preprint/authblk.sty
 Package: authblk 2001/02/27 1.3 (PWD)
-\affilsep=\skip44
-\@affilsep=\skip45
-\c@Maxaffil=\count92
-\c@authors=\count93
-\c@affil=\count94
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
+\affilsep=\skip46
+\@affilsep=\skip47
+\c@Maxaffil=\count105
+\c@authors=\count106
+\c@affil=\count107
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.sty (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks20
 )
-\lst@mode=\count95
-\lst@gtempboxa=\box28
-\lst@token=\toks21
-\lst@length=\count96
-\lst@currlwidth=\dimen111
-\lst@column=\count97
-\lst@pos=\count98
-\lst@lostspace=\dimen112
-\lst@width=\dimen113
-\lst@newlines=\count99
-\lst@lineno=\count100
-\abovecaptionskip=\skip46
-\belowcaptionskip=\skip47
-\lst@maxwidth=\dimen114
- (/usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstmisc.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.sty
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+\lst@mode=\count108
+\lst@gtempboxa=\box44
+\lst@token=\toks22
+\lst@length=\count109
+\lst@currlwidth=\dimen130
+\lst@column=\count110
+\lst@pos=\count111
+\lst@lostspace=\dimen131
+\lst@width=\dimen132
+\lst@newlines=\count112
+\lst@lineno=\count113
+\lst@maxwidth=\dimen133
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count101
-\lst@skipnumbers=\count102
-\lst@framebox=\box29
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.cfg
+\c@lstnumber=\count114
+\lst@skipnumbers=\count115
+\lst@framebox=\box45
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
- (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: dvipdfmx.def on input line 99.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
 File: dvipdfmx.def 2017/06/24 v5.0g Graphics/color driver for dvipdfmx
 ))
-\Gin@req@height=\dimen115
-\Gin@req@width=\dimen116
-) (/Users/uchiumi/workspace/CV_report2019/docs/main.aux)
+\Gin@req@height=\dimen134
+\Gin@req@width=\dimen135
+)
+(./main.aux
+
+LaTeX Warning: Label `fig:AC_PetriNet' multiply defined.
+
+
+LaTeX Warning: Label `fig:AC_PetriNet' multiply defined.
+
+
+LaTeX Warning: Label `fig:AC_PetriNet' multiply defined.
+
+
+LaTeX Warning: Label `fig:AC_PetriNet' multiply defined.
+
+
+LaTeX Warning: Label `fig:AC_PetriNet' multiply defined.
+
+
+LaTeX Warning: Label `fig:AC_PetriNet' multiply defined.
+
+
+LaTeX Warning: Label `fig:AC_PetriNet' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -151,1358 +194,98 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:18: LaTeX Error: The font size command \normalsize is not defined:
-               there is probably something wrong with the class file.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.18 \begin{document}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-\c@lstlisting=\count103
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:20: Undefined control sequence.
-\maketitle ...ter}} {\end {center}} \AB@maketitle 
-                                                  }
-l.20   \maketitle
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:22: LaTeX Error: Environment abstract undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.22   \begin{abstract}
-                       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character モ (U+30E2)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23     モ
-            ダンな物体追跡手法として，KCF Tracker (Kernelized C...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character ダ (U+30C0)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23     モダ
-               ンな物体追跡手法として，KCF Tracker (Kernelized C...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character ン (U+30F3)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23     モダン
-                  な物体追跡手法として，KCF Tracker (Kernelized C...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character な (U+306A)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23     モダンな
-                     物体追跡手法として，KCF Tracker (Kernelized C...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character 物 (U+7269)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23     モダンな物
-                        体追跡手法として，KCF Tracker (Kernelized C...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character 体 (U+4F53)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23     モダンな物体
-                           追跡手法として，KCF Tracker (Kernelized C...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character 追 (U+8FFD)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23     モダンな物体追
-                              跡手法として，KCF Tracker (Kernelized C...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character 跡 (U+8DE1)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23     モダンな物体追跡
-                                 手法として，KCF Tracker (Kernelized C...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character 手 (U+624B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23     モダンな物体追跡手
-                                    法として，KCF Tracker (Kernelized C...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character 法 (U+6CD5)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23     モダンな物体追跡手法
-                                       として，KCF Tracker (Kernelized C...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character と (U+3068)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23     モダンな物体追跡手法と
-                                          して，KCF Tracker (Kernelized C...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character し (U+3057)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23     モダンな物体追跡手法とし
-                                             て，KCF Tracker (Kernelized C...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character て (U+3066)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23     モダンな物体追跡手法として
-                                                ，KCF Tracker (Kernelized C...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character ， (U+FF0C)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...モダンな物体追跡手法として，
-                                                  KCF Tracker (Kernelized Co...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-Missing character: There is no K in font nullfont!
-Missing character: There is no C in font nullfont!
-Missing character: There is no F in font nullfont!
-Missing character: There is no T in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no K in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no z in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no C in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no F in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no T in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no ) in font nullfont!
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character を (U+3092)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...(Kernelized Correlation Filter Tracker)を
-                                                  紹介し，実装をお�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character 紹 (U+7D39)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...rnelized Correlation Filter Tracker)を紹
-                                                  介し，実装をおこ�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character 介 (U+4ECB)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...lized Correlation Filter Tracker)を紹介
-                                                  し，実装をおこな�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character し (U+3057)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...ed Correlation Filter Tracker)を紹介し
-                                                  ，実装をおこなっ�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character ， (U+FF0C)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...Correlation Filter Tracker)を紹介し，
-                                                  実装をおこなった．
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character 実 (U+5B9F)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...relation Filter Tracker)を紹介し，実
-                                                  装をおこなった．
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character 装 (U+88C5)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...ation Filter Tracker)を紹介し，実装
-                                                  をおこなった．
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character を (U+3092)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...on Filter Tracker)を紹介し，実装を
-                                                  おこなった．
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character お (U+304A)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...Filter Tracker)を紹介し，実装をお
-                                                  こなった．
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character こ (U+3053)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...ter Tracker)を紹介し，実装をおこ
-                                                  なった．
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character な (U+306A)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ... Tracker)を紹介し，実装をおこな
-                                                  った．
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character っ (U+3063)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...acker)を紹介し，実装をおこなっ
-                                                  た．
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character た (U+305F)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...er)を紹介し，実装をおこなった
-                                                  ．
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:23: Package inputenc Error: Unicode character ． (U+FF0E)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...を紹介し，実装をおこなった．
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-Missing character: There is no K in font nullfont!
-Missing character: There is no C in font nullfont!
-Missing character: There is no F in font nullfont!
-Missing character: There is no T in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character は (U+306F)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24     KCF Trackerは
-                       ，データ行列に巡回性を持たせること�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character ， (U+FF0C)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24     KCF Trackerは，
-                          データ行列に巡回性を持たせること�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character デ (U+30C7)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24     KCF Trackerは，デ
-                             ータ行列に巡回性を持たせること�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character ー (U+30FC)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24     KCF Trackerは，デー
-                                タ行列に巡回性を持たせること�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character タ (U+30BF)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24     KCF Trackerは，データ
-                                   行列に巡回性を持たせること�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character 行 (U+884C)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24     KCF Trackerは，データ行
-                                      列に巡回性を持たせること�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character 列 (U+5217)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24     KCF Trackerは，データ行列
-                                         に巡回性を持たせること�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character に (U+306B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24     KCF Trackerは，データ行列に
-                                            巡回性を持たせること�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character 巡 (U+5DE1)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24     KCF Trackerは，データ行列に巡
-                                               回性を持たせること�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character 回 (U+56DE)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24     KCF Trackerは，データ行列に巡回
-                                                  性を持たせること�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character 性 (U+6027)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...F Trackerは，データ行列に巡回性
-                                                  を持たせることに�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character を (U+3092)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...rackerは，データ行列に巡回性を
-                                                  持たせることによ�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character 持 (U+6301)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...kerは，データ行列に巡回性を持
-                                                  たせることにより�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character た (U+305F)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...は，データ行列に巡回性を持た
-                                                  せることにより，DC...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character せ (U+305B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...，データ行列に巡回性を持たせ
-                                                  ることにより，DCT�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character る (U+308B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...データ行列に巡回性を持たせる
-                                                  ことにより，DCTに�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character こ (U+3053)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...ータ行列に巡回性を持たせるこ
-                                                  とにより，DCTによ�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character と (U+3068)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...タ行列に巡回性を持たせること
-                                                  により，DCTによる�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character に (U+306B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...行列に巡回性を持たせることに
-                                                  より，DCTによる対�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character よ (U+3088)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...列に巡回性を持たせることによ
-                                                  り，DCTによる対角�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character り (U+308A)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...に巡回性を持たせることにより
-                                                  ，DCTによる対角化�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character ， (U+FF0C)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...巡回性を持たせることにより，
-                                                  DCTによる対角化が�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-Missing character: There is no D in font nullfont!
-Missing character: There is no C in font nullfont!
-Missing character: There is no T in font nullfont!
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character に (U+306B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...性を持たせることにより，DCTに
-                                                  よる対角化が可能�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character よ (U+3088)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...を持たせることにより，DCTによ
-                                                  る対角化が可能と�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character る (U+308B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...持たせることにより，DCTによる
-                                                  対角化が可能とな�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character 対 (U+5BFE)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...たせることにより，DCTによる対
-                                                  角化が可能となり�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character 角 (U+89D2)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...せることにより，DCTによる対角
-                                                  化が可能となり，�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character 化 (U+5316)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...ることにより，DCTによる対角化
-                                                  が可能となり，処�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character が (U+304C)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...ことにより，DCTによる対角化が
-                                                  可能となり，処理�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character 可 (U+53EF)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...とにより，DCTによる対角化が可
-                                                  能となり，処理に�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character 能 (U+80FD)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...により，DCTによる対角化が可能
-                                                  となり，処理にか�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character と (U+3068)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...より，DCTによる対角化が可能と
-                                                  なり，処理にかか�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character な (U+306A)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...り，DCTによる対角化が可能とな
-                                                  り，処理にかかる�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character り (U+308A)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...，DCTによる対角化が可能となり
-                                                  ，処理にかかるス�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character ， (U+FF0C)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...DCTによる対角化が可能となり，
-                                                  処理にかかるスト�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character 処 (U+51E6)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...による対角化が可能となり，処
-                                                  理にかかるストレ�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character 理 (U+7406)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...よる対角化が可能となり，処理
-                                                  にかかるストレー�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character に (U+306B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...る対角化が可能となり，処理に
-                                                  かかるストレージ�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character か (U+304B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...対角化が可能となり，処理にか
-                                                  かるストレージお�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character か (U+304B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...角化が可能となり，処理にかか
-                                                  るストレージおよ�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character る (U+308B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...化が可能となり，処理にかかる
-                                                  ストレージおよび�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character ス (U+30B9)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...が可能となり，処理にかかるス
-                                                  トレージおよび計�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character ト (U+30C8)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...可能となり，処理にかかるスト
-                                                  レージおよび計算�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character レ (U+30EC)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...能となり，処理にかかるストレ
-                                                  ージおよび計算量�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character ー (U+30FC)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...となり，処理にかかるストレー
-                                                  ジおよび計算量を�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character ジ (U+30B8)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...なり，処理にかかるストレージ
-                                                  および計算量を大�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character お (U+304A)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...り，処理にかかるストレージお
-                                                  よび計算量を大幅�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character よ (U+3088)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...，処理にかかるストレージおよ
-                                                  び計算量を大幅に�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character び (U+3073)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...処理にかかるストレージおよび
-                                                  計算量を大幅に削�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character 計 (U+8A08)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...理にかかるストレージおよび計
-                                                  算量を大幅に削減�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character 算 (U+7B97)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...にかかるストレージおよび計算
-                                                  量を大幅に削減す�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character 量 (U+91CF)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...かかるストレージおよび計算量
-                                                  を大幅に削減する�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character を (U+3092)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...かるストレージおよび計算量を
-                                                  大幅に削減するこ�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character 大 (U+5927)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...るストレージおよび計算量を大
-                                                  幅に削減すること�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character 幅 (U+5E45)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...ストレージおよび計算量を大幅
-                                                  に削減することが�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character に (U+306B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...トレージおよび計算量を大幅に
-                                                  削減することがで�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character 削 (U+524A)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...レージおよび計算量を大幅に削
-                                                  減することができ�...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character 減 (U+6E1B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...ージおよび計算量を大幅に削減
-                                                  することができる．
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character す (U+3059)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...ジおよび計算量を大幅に削減す
-                                                  ることができる．
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character る (U+308B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...および計算量を大幅に削減する
-                                                  ことができる．
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character こ (U+3053)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...よび計算量を大幅に削減するこ
-                                                  とができる．
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character と (U+3068)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...び計算量を大幅に削減すること
-                                                  ができる．
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character が (U+304C)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...計算量を大幅に削減することが
-                                                  できる．
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character で (U+3067)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...算量を大幅に削減することがで
-                                                  きる．
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character き (U+304D)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...量を大幅に削減することができ
-                                                  る．
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character る (U+308B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...を大幅に削減することができる
-                                                  ．
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:24: Package inputenc Error: Unicode character ． (U+FF0E)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...大幅に削減することができる．
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:25: Package inputenc Error: Unicode character さ (U+3055)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25     さ
-            らに，カーネルトリックにより
-(That makes 100 errors; please try again.) 
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+\c@lstlisting=\count116
+LaTeX Font Info:    Try loading font information for U+msa on input line 20.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 20.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 22.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 22.
+
+Overfull \hbox (3.4464pt too wide) in paragraph at lines 23--26
+[]\JY1/mc/m/n/10 モダンな物体追跡手法として ， \OT1/cmr/m/n/10 KCF Tracker (Ker
+-nel-ized Cor-re-la-tion Fil-ter Tracker)
+ []
+
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 28.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 28.
+(./main.toc
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10.95> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10.95> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
+)
+\tf@toc=\write3
+\openout3 = `main.toc'.
+
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 32.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 32.
+ [1
+
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 77.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 77.
+
+[2] [3] [4] [5] [6] [7]
+File: ./figures/chaplin_kcf_opencv.jpg Graphic file (type bmp)
+<./figures/chaplin_kcf_opencv.jpg>
+File: ./figures/chaplin_kcf_impl.jpg Graphic file (type bmp)
+<./figures/chaplin_kcf_impl.jpg>
+File: ./figures/car1_kcf_opencv.jpg Graphic file (type bmp)
+<./figures/car1_kcf_opencv.jpg>
+File: ./figures/car1_kcf_impl.jpg Graphic file (type bmp)
+<./figures/car1_kcf_impl.jpg>
+File: ./figures/car2_kcf_opencv.jpg Graphic file (type bmp)
+<./figures/car2_kcf_opencv.jpg>
+File: ./figures/car2_kcf_impl.jpg Graphic file (type bmp)
+<./figures/car2_kcf_impl.jpg>
+File: ./figures/bus1_kcf_opencv.jpg Graphic file (type bmp)
+<./figures/bus1_kcf_opencv.jpg>
+File: ./figures/bus1_kcf_impl.jpg Graphic file (type bmp)
+<./figures/bus1_kcf_impl.jpg>
+ (./main.bbl
+
+LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
+(Font)              using `JT1/gt/m/n' instead on input line 5.
+
+
+LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
+(Font)              using `JY1/gt/m/n' instead on input line 5.
+
+[8] [9] [10] [11]) [12] (./main.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2622 strings out of 492649
- 34755 string characters out of 6129622
- 101473 words of memory out of 5000000
- 6535 multiletter control sequences out of 15000+600000
- 3640 words of font info for 14 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 27i,1n,32p,283b,217s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 3212 strings out of 493281
+ 40837 string characters out of 6145041
+ 134219 words of memory out of 5000000
+ 7107 multiletter control sequences out of 15000+600000
+ 24832 words of font info for 99 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 27i,16n,32p,251b,1707s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-/Users/uchiumi/workspace/CV_report2019/docs/main.tex:25:  ==> Fatal error occurred, no output PDF file produced!
+Output written on main.dvi (12 pages, 41828 bytes).
