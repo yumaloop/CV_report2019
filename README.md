@@ -11,7 +11,8 @@
 - OS 
     - macOS Mojave 10.14.4
 - App
-    - QuickTime Player 10.5 (935.3), iMovie (10.1.12)
+    - QuickTime Player 10.5 (935.3)
+    - iMovie (10.1.12)
 - Language
     - Python 3.7.4
         - Numpy 1.16.1
