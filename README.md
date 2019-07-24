@@ -22,4 +22,20 @@ $ python3 run_bus2.py
 
 ### References
 
-- https://ehsangazar.com/object-tracking-with-opencv-fd18ccdd7369
+- Richard Szeliski. Computer Vision: Algorithms and Applications. Springer-Verlag, Berlin, Heidelberg, 1st edition, 2010.<br>
+http://szeliski.org/Book/drafts/SzeliskiBook_20100903_draft.pdf
+
+- Berthold K.P. Horn and Brian G. Schunck. Determining optical flow. Technical report, Cambridge, MA, USA, 1980.<br>
+http://image.diku.dk/imagecanon/material/HornSchunckOptical_Flow.pdf
+
+- Bruce D. Lucas and Takeo Kanade. An iterative image registration technique with an application to stereo vision. In Proceedings of the 7th International Joint Conference on Artificial Intelligence - Volume 2, IJCAI’81, pp. 674–679, San Francisco, CA, USA, 1981. Morgan Kaufmann Publishers Inc.<br>
+https://cecas.clemson.edu/~stb/klt/lucas_bruce_d_1981_1.pdf
+
+- Chris Harris and Mike Stephens. A combined corner and edge detector. In In Proc. of Fourth Alvey Vision Conference, pp. 147–151, 1988.<br>
+http://www.bmva.org/bmvc/1988/avc-88-023.pdf
+
+- Carlo Tomasi and Takeo Kanade. Detection and tracking of point features. Technical report, International Journal of Computer Vision, 1991.<br>
+https://cecas.clemson.edu/~stb/klt/tomasi-kanade-techreport-1991.pdf
+
+- Joao F. Henriques, Rui Caseiro, Pedro Martins, and Jorge Batista. High-speed tracking with kernelized correlation filters. CoRR, Vol. abs/1404.7584, , 2014.<br>
+https://arxiv.org/pdf/1404.7584.pdf
