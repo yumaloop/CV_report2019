@@ -5,7 +5,7 @@ https://ehsangazar.com/object-tracking-with-opencv-fd18ccdd7369
 
 
 ### Description
-
+慶應義塾大学 理工学研究科 「Computer Vision特論 (2019春)」の期末レポートです．
 
 ### Usage
 
