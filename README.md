@@ -4,7 +4,8 @@
 
 ### Description
 
-レポートは`docs/main.pdf`に，実装に使ったコードは`code`にある．
+レポートは`docs/main.pdf`に，実装に使ったコードは`code`にある．<br>
+KCF TrackerをPythonで実装した．
 
 ### Requirements
 
