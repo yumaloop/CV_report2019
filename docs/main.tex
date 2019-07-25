@@ -538,6 +538,12 @@
   今回は，KCF Trackerの実装において，ほぼすべての積和演算をPython(Numpy)で記述したため，C++で記述されているOpenCVのKCF Trackerと比較して，FPSではx10~x20程度の差が発生した．
   物体追跡は応用上，精度と共にリアルタイム性が求められるため，アルゴリズムを固定していても，ソフトウェアやアプリケーションレベルでの高速化が求められるということを認識した．
 
+  \paragraph{まとめ}
+  OpenCVのObject Trackingツールとして提供されている手法の1つとして，
+  KCF Tracker\cite{DBLP:journals/corr/HenriquesCMB14}の実装を行い，実際に撮影した動画(RGB)で物体追跡を行なった．
+  KCF Trackerは，離散フーリエ変換による空間表現から周波数表現への変換，巡回行列のもつ線型独立性の応用，Ridge回帰に対するカーネル法の導入，など
+  提案手法中に様々な要素技術が登場するため，実装に取り組む上で大変示唆的な経験を得られた．
+
   \newpage
 
   \bibliography{ref} % ref.bibから拡張子を外した名前

@@ -20,3 +20,4 @@
 \contentsline {section}{\numberline {4}考察と結論}{13}
 \contentsline {paragraph}{KCF Trackerについて}{13}
 \contentsline {paragraph}{OpenCVと実装した処理系との差異}{13}
+\contentsline {paragraph}{まとめ}{13}
