@@ -34,4 +34,11 @@ Jo{\~{a}}o~F. Henriques, Rui Caseiro, Pedro Martins, and Jorge Batista.
 \newblock High-speed tracking with kernelized correlation filters.
 \newblock {\em CoRR}, Vol. abs/1404.7584, , 2014.
 
+\bibitem{yun2017adnet}
+Sangdoo Yun, Jongwon Choi, Youngjoon Yoo, Kimin Yun, and Jin Young~Choi.
+\newblock Action-decision networks for visual tracking with deep reinforcement
+  learning.
+\newblock In {\em The IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, 2017.
+
 \end{thebibliography}

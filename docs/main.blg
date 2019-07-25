@@ -4,46 +4,46 @@ The top-level auxiliary file: main.aux
 The style file: junsrt.bst
 Database file #1: ref.bib
 Warning--empty institution in Horn:1980:DOF:888857
-You've used 6 entries,
+You've used 7 entries,
             2270 wiz_defined-function locations,
-            583 strings with 5217 characters,
-and the built_in function-call counts, 1688 in all, are:
-= -- 138
-> -- 45
+            588 strings with 5463 characters,
+and the built_in function-call counts, 1968 in all, are:
+= -- 151
+> -- 61
 < -- 3
-+ -- 19
-- -- 13
-* -- 69
-:= -- 221
-add.period$ -- 19
-call.type$ -- 6
-change.case$ -- 8
++ -- 25
+- -- 18
+* -- 81
+:= -- 258
+add.period$ -- 22
+call.type$ -- 7
+change.case$ -- 9
 chr.to.int$ -- 0
-cite$ -- 7
-duplicate$ -- 112
-empty$ -- 168
-format.name$ -- 26
-if$ -- 415
+cite$ -- 8
+duplicate$ -- 131
+empty$ -- 199
+format.name$ -- 36
+if$ -- 483
 int.to.chr$ -- 0
-int.to.str$ -- 6
-missing$ -- 5
-newline$ -- 33
-num.names$ -- 6
-pop$ -- 39
+int.to.str$ -- 7
+missing$ -- 6
+newline$ -- 38
+num.names$ -- 7
+pop$ -- 49
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 84
+skip$ -- 95
 stack$ -- 0
 substring$ -- 64
-swap$ -- 24
+swap$ -- 26
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 12
-width$ -- 7
-write$ -- 72
-is.kanji.str$ -- 62
+while$ -- 13
+width$ -- 8
+write$ -- 82
+is.kanji.str$ -- 76
 (There was 1 warning)

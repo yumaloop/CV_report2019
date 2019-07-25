@@ -8,7 +8,15 @@
 \contentsline {subsection}{\numberline {2.4}Kernel Ridge回帰}{5}
 \contentsline {subsection}{\numberline {2.5}巡回行列を使ったKernel Ridge回帰}{6}
 \contentsline {section}{\numberline {3}実装}{6}
+\contentsline {subsection}{\numberline {3.1}詳細}{6}
+\contentsline {paragraph}{カーネル関数}{6}
 \contentsline {paragraph}{実行環境}{7}
-\contentsline {paragraph}{出力結果}{8}
-\contentsline {section}{\numberline {4}考察}{8}
-\contentsline {section}{\numberline {5}結論}{8}
+\contentsline {paragraph}{使用した動画ファイル}{8}
+\contentsline {subsection}{\numberline {3.2}結果}{8}
+\contentsline {paragraph}{chaplin.mp4}{9}
+\contentsline {paragraph}{car1.mp4}{10}
+\contentsline {paragraph}{car2.mp4}{11}
+\contentsline {paragraph}{bus1.mp4}{12}
+\contentsline {section}{\numberline {4}考察と結論}{13}
+\contentsline {paragraph}{KCF Trackerについて}{13}
+\contentsline {paragraph}{OpenCVと実装した処理系との差異}{13}

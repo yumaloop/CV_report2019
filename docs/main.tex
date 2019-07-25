@@ -20,9 +20,10 @@
   \maketitle
   % 要約
   \begin{abstract}
-    モダンな物体追跡手法として，KCF Tracker (Kernelized Correlation Filter Tracker)を紹介し，実装をおこなった．
-    KCF Trackerは，データ行列に巡回性を持たせることにより，DCTによる対角化が可能となり，処理にかかるストレージおよび計算量を大幅に削減することができる．
-    さらに，カーネルトリックにより
+    現代的な物体追跡手法として，KCF Tracker (Kernelized Correlation Filter Tracker)を紹介し実装を行う．
+    KCF Trackerは，データ行列に巡回性を持たせることにより，DCTによる対角化が可能となり，処理にかかるメモリ容量および計算量を大幅に削減する．
+    加えて，データ行列に対する正則化つき線形回帰問題を，カーネル法を用いて解くことで，カーネルトリックによる計算量削減を実現し，リアルタイムで高速な物体追跡を可能にする．
+    なお，実装に使用したコードは，\url{https://github.com/yumaloop/CV_report2019}で公開している．
   \end{abstract}
   % 目次
   \tableofcontents
@@ -299,126 +300,159 @@
       
   \section{実装}
 
-    RBF kernelを用いる．
+    \subsection{詳細}
 
-    \begin{align}
-      {\bf {k}^{xx'}} = \exp \left\{ - \frac{1}{\sigma^2} \left( \norm{\bf x}^{2} + \norm{\bf x'}^{2} - 2 {F}^{-1} ( \hat{{\bf x}}^{*} \odot \hat{\bf x}' ) \right) \right\}
-    \end{align}
+      \paragraph{カーネル関数}
 
-    \paragraph{実行環境}
-    以下の環境でプログラムを実装した．主要なスクリプトの記述にはPythonを採用した．
-    使用したコードは，\url{https://github.com/yumaloop/CV_report2019}で公開した．
+      RBF kernel(Gaussian Kernel)を用いる．
 
-    \begin{itemize}
-      \item OS: macOS Mojave 10.14.4
-      \item App: QuickTime Player 10.5 (935.3), iMovie (10.1.12)
-      \item Lang: Python 3.7.4
-      \item Lib: Numpy 1.16.1, Opencv-python 4.1.0
-    \end{itemize}
+      \begin{align}
+        {\bf {k}^{xx'}} = \exp \left\{ - \frac{1}{\sigma^2} \left( \norm{\bf x}^{2} + \norm{\bf x'}^{2} - 2 {F}^{-1} ( \hat{{\bf x}}^{*} \odot \hat{\bf x}' ) \right) \right\}
+      \end{align}
 
-    なお，今回は，KCF Trackerアルゴリズムのみを実装したため，動画の入出力やユーザインターフェースは，OpenCVの定義済み関数を利用した．
-    具体的に，KCF Trackerのオブジェクトをインポートできる$\rm OpenCVのcv2.TrackerKCF\_create()$を使って，Object Trackingを行うコードは次のようになる．
-    このうち，コード中のオブジェクト$\rm tracker$と関連する処理を実装した．
+      \paragraph{実行環境}
+      以下の環境でプログラムを実装した．主要なスクリプトの記述にはPythonを採用した．
+      使用したコードは，\url{https://github.com/yumaloop/CV_report2019}で公開した．
+
+      \begin{itemize}
+        \item OS: macOS Mojave 10.14.4
+        \item App: QuickTime Player 10.5 (935.3), iMovie (10.1.12)
+        \item Lang: Python 3.7.4
+        \item Lib: Numpy 1.16.1, Opencv-python 4.1.0
+      \end{itemize}
+
+      なお，今回は，KCF Trackerアルゴリズムのみを実装したため，動画の入出力やユーザインターフェースは，OpenCVの定義済み関数を利用した．
+      具体的に，KCF Trackerのオブジェクトをインポートできる$\rm OpenCVのcv2.TrackerKCF\_create()$を使って，Object Trackingを行うコードは次のようになる．
+      このうち，コード中のオブジェクト$\rm tracker$と関連する処理を実装した．
+      \\*
+      
+      \begin{lstlisting}[basicstyle=\ttfamily\footnotesize, frame=single]
+        import sys
+        import cv2
+
+        # Set up tracker as KCF.
+        tracker = cv2.TrackerKCF_create()
+
+        # cap: captured images from the video
+        input_file = "********.mp4"
+        cap = cv2.VideoCapture(input_file)
+        cap_width  = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+        cap_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+        cap_size = (cap_width, cap_height)
     
-    \begin{lstlisting}[basicstyle=\ttfamily\footnotesize, frame=single]
-      import sys
-      import cv2
+        # out: result video (m4v)
+        # see also https://gist.github.com/takuma7/44f9ecb028ff00e2132e
+        output_file = "********.m4v"
+        fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')  
+        out = cv2.VideoWriter(output_file, fourcc, 20.0, cap_size)
+      
+        # Exit if video not opened.
+        if not cap.isOpened():
+            print("Cannot open the video file.")
+            sys.exit()
+      
+        # Read first frame.
+        ret, frame = cap.read()
+        if not ret:
+            print('Cannot read the video file.')
+            sys.exit()
+          
+        # Initialize bounding box
+        bbox = (287, 23, 86, 320)
+        # Uncomment the line below to select a different bounding box
+        bbox = cv2.selectROI(frame, False)
+      
+        # Initialize tracker
+        ret = tracker.init(frame, bbox)
 
-      # Set up tracker as KCF.
-      tracker = cv2.TrackerKCF_create()
+        while True:
+        # Read a new frame
+        ret, frame = cap.read()
+        if not ret: break
 
-      # cap: captured images from the video
-      input_file = "********.mp4"
-      cap = cv2.VideoCapture(input_file)
-      cap_width  = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-      cap_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-      cap_size = (cap_width, cap_height)
-  
-      # out: result video (m4v)
-      # see also https://gist.github.com/takuma7/44f9ecb028ff00e2132e
-      output_file = "********.m4v"
-      fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')  
-      out = cv2.VideoWriter(output_file, fourcc, 20.0, cap_size)
+        # =================================================
+        ''' Update tracker (Tracking process in OpenCV) '''
+        ret, bbox = tracker.update(frame) 
+        # =================================================
+
+        # Draw bounding box
+        if ret:
+            # Tracking succeeded
+            p1 = (int(bbox[0]), int(bbox[1]))
+            p2 = (int(bbox[0] + bbox[2]), int(bbox[1] + bbox[3]))
+            cv2.rectangle(frame, p1, p2, (255,0,0), 2, 1)
+        else :
+            # Tracking failed
+            cv2.putText(frame, "Tracking failure detected", 
+            (100, 80), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0,0,255) ,2)
+
+        # Display result
+        cv2.imshow("Tracking", frame)
+
+        # Save result as mp4 file
+        out.write(frame)
+
+        # Exit if ESC pressed
+        k = cv2.waitKey(1) & 0xff
+        if k == 27:
+            break
+      \end{lstlisting}
+
+      \paragraph{使用した動画ファイル}
+      
+      4つのmp4形式のファイルを入力ファイルとして，動画中の物体を矩形で囲み追跡した．
+
+      \begin{itemize}
+        \item chaplin.mp4
+        \item car1.mp4
+        \item car2.mp4
+        \item bus1.mp4
+      \end{itemize}
+
+    \subsection{結果}
     
-      # Exit if video not opened.
-      if not cap.isOpened():
-          print("Cannot open the video file.")
-          sys.exit()
-    
-      # Read first frame.
-      ret, frame = cap.read()
-      if not ret:
-          print('Cannot read the video file.')
-          sys.exit()
-        
-      # Initialize bounding box
-      bbox = (287, 23, 86, 320)
-      # Uncomment the line below to select a different bounding box
-      bbox = cv2.selectROI(frame, False)
-    
-      # Initialize tracker
-      ret = tracker.init(frame, bbox)
+    それぞれの入力ファイルに対して，OpenCVに定義されているKCF Trackerと，実装したKCF Trackerで物体追跡を行い．出力結果を比較する．
+    また，出力された動画ファイルを再生し，0.5 secごとにフレームを画像として保存したものを掲載する．
 
-      while True:
-      # Read a new frame
-      ret, frame = cap.read()
-      if not ret: break
-
-      # =================================================
-      ''' Update tracker (Tracking process in OpenCV) '''
-      ret, bbox = tracker.update(frame) 
-      # =================================================
-
-      # Draw bounding box
-      if ret:
-          # Tracking succeeded
-          p1 = (int(bbox[0]), int(bbox[1]))
-          p2 = (int(bbox[0] + bbox[2]), int(bbox[1] + bbox[3]))
-          cv2.rectangle(frame, p1, p2, (255,0,0), 2, 1)
-      else :
-          # Tracking failed
-          cv2.putText(frame, "Tracking failure detected", 
-          (100, 80), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0,0,255) ,2)
-
-      # Display result
-      cv2.imshow("Tracking", frame)
-
-      # Save result as mp4 file
-      out.write(frame)
-
-      # Exit if ESC pressed
-      k = cv2.waitKey(1) & 0xff
-      if k == 27:
-          break
-    \end{lstlisting}
-
-    \paragraph{出力結果}
-    まず．chaplin.mp4で
+    \paragraph{chaplin.mp4}
+    動画(グレースケール)上の人物の追跡を行なった．
+    OpenCVのKCF Tracker(図\ref{fig:chaplin_opencv}参照)と実装したKCF Tracker(図\ref{fig:chaplin_impl}参照)で大きな差はなかったが，
+    実装したものの方がフレーム毎のbounding boxの変化が大きい．
+    これは，画像(動画)に応じて，KCFに用いるpadding sizeやRBF kernelの$\sigma$の大きさなどで調節可能である．
+    \\*
 
     % fig1 chaplin opencv
     \begin{figure}[hbtp]
       \begin{center}
-        \includegraphics[clip,width=12.5cm]{./figures/chaplin_kcf_opencv.jpg}
+        \includegraphics[clip,width=9.6cm]{./figures/chaplin_kcf_opencv.jpg}
         \caption{chaplin.mp4に対して，OpenCV KCF Trackerで物体追跡を行なった結果}
-        \label{fig:AC_PetriNet}
+        \label{fig:chaplin_opencv}
       \end{center}
     \end{figure}
 
     % fig2 chaplin impl
     \begin{figure}[hbtp]
       \begin{center}
-        \includegraphics[clip,width=12.5cm]{./figures/chaplin_kcf_impl.jpg}
+        \includegraphics[clip,width=9.6cm]{./figures/chaplin_kcf_impl.jpg}
         \caption{chaplin.mp4に対して，実装した KCF Trackerで物体追跡を行なった結果}
-        \label{fig:AC_PetriNet}
+        \label{fig:chaplin_impl}
       \end{center}
     \end{figure}
+
+    \newpage
+
+    \paragraph{car1.mp4}
+    動画(RGB)上の車の追跡を行なった．
+    OpenCVのKCF Tracker(図\ref{fig:car1_opencv}参照)よりも，実装したKCF Tracker(図\ref{fig:car1_impl}参照)の方が精度良く追跡できているように見える．
+    画像中の物体のdepthをうまく捉える必要があるが，実装したものでは，フレーム毎にbounding boxが小さくなり，車の輪郭を捉えることができた．
+    \\*
 
     % fig3 car1 opencv
     \begin{figure}[hbtp]
       \begin{center}
         \includegraphics[clip,width=12.5cm]{./figures/car1_kcf_opencv.jpg}
         \caption{car1.mp4に対して，OpenCV KCF Trackerで物体追跡を行なった結果}
-        \label{fig:AC_PetriNet}
+        \label{fig:car1_opencv}
       \end{center}
     \end{figure}
 
@@ -427,55 +461,84 @@
       \begin{center}
         \includegraphics[clip,width=12.5cm]{./figures/car1_kcf_impl.jpg}
         \caption{car1.mp4に対して，実装した KCF Trackerで物体追跡を行なった結果}
-        \label{fig:AC_PetriNet}
+        \label{fig:car1_impl}
       \end{center}
     \end{figure}
+
+    \newpage
+
+    \paragraph{car2.mp4}
+    動画(RGB)上の車の追跡を行なった．
+    OpenCVのKCF Tracker(図\ref{fig:car2_opencv}参照)と，実装したKCF Tracker(図\ref{fig:car2_impl}参照)で大きな差異はみられなかった．
+    \\*
 
     % fig5 car2 opencv
     \begin{figure}[hbtp]
       \begin{center}
         \includegraphics[clip,width=12.5cm]{./figures/car2_kcf_opencv.jpg}
         \caption{car2.mp4に対して，OpenCV KCF Trackerで物体追跡を行なった結果}
-        \label{fig:AC_PetriNet}
+        \label{fig:car2_opencv}
       \end{center}
     \end{figure}
 
     % fig6 car2 impl
-    \begin{figure}[hbtp]
+    \begin{figure}[bhtp]
       \begin{center}
         \includegraphics[clip,width=12.5cm]{./figures/car2_kcf_impl.jpg}
         \caption{car2.mp4に対して，実装した KCF Trackerで物体追跡を行なった結果}
-        \label{fig:AC_PetriNet}
+        \label{fig:car2_impl}
       \end{center}
     \end{figure}
+
+    \newpage
+
+    \paragraph{bus1.mp4}
+    動画(RGB)上のバスの追跡を行なった．
+    実装したKCF Tracker(図\ref{fig:bus1_impl}参照)よりも，OpenCVのKCF Tracker(図\ref{fig:bus1_opencv}参照)の方が精度良く追跡できているように見える．
+    \\*
 
     % fig7 bus1 opencv
     \begin{figure}[hbtp]
       \begin{center}
         \includegraphics[clip,width=12.5cm]{./figures/bus1_kcf_opencv.jpg}
         \caption{bus1.mp4に対して，OpenCV KCF Trackerで物体追跡を行なった結果}
-        \label{fig:AC_PetriNet}
+        \label{fig:bus1_opencv}
       \end{center}
     \end{figure}
 
     % fig8 bus1 impl
-    \begin{figure}[hbtp]
+    \begin{figure}[htbp]
       \begin{center}
         \includegraphics[clip,width=12.5cm]{./figures/bus1_kcf_impl.jpg}
         \caption{bus1.mp4に対して，実装した KCF Trackerで物体追跡を行なった結果}
-        \label{fig:AC_PetriNet}
+        \label{fig:bus1_impl}
       \end{center}
     \end{figure}
 
-  \section{考察}
+    \newpage
   
-  \section{結論}
+  \section{考察と結論}
 
-    \begin{itemize}
-      \item foo
-      \item bar
-      \item buz
-    \end{itemize}
+  \paragraph{KCF Trackerについて}
+  現代的な物体追跡手法を比較すると，図\ref{fig:tracker_comparison}のようになる．\cite{yun2017adnet}
+  近年では，Deep Neural Networkと用いた大規模なモデルと，GPUによる演算処理が隆盛を極めており，
+  精度(Precision, IOU(AUC))においてはこれらが優位とされている．
+  一方で，リアルタイム性やFPSを考慮すると，KCF Trackerも十分有用であるとも言える．
+
+  % fig9 comparison
+  \begin{figure}[htbp]
+    \begin{center}
+      \includegraphics[clip,width=12.5cm]{./figures/yun2017adnet.png}
+      \caption{近年のObject Tracking手法の比較\cite{yun2017adnet}}
+      \label{fig:tracker_comparison}
+    \end{center}
+  \end{figure}
+
+  \paragraph{OpenCVと実装した処理系との差異}
+  今回は，KCF Trackerの実装において，ほぼすべての積和演算をPython(Numpy)で記述したため，C++で記述されているOpenCVのKCF Trackerと比較して，FPSではx10~x20程度の差が発生した．
+  物体追跡は応用上，精度と共にリアルタイム性が求められるため，アルゴリズムを固定していても，ソフトウェアやアプリケーションレベルでの高速化が求められるということを認識した．
+
+  \newpage
 
   \bibliography{ref} % ref.bibから拡張子を外した名前
   \bibliographystyle{junsrt} % 参考文献出力スタイル
